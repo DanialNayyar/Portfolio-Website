@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bridge Opening Mechanism</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="media.css" />
+</head>
+<body>
+
+
+  <nav id="desktop-nav">
+    <div class="logo">
+      <a href="index.html">Danial Nayyar</a>
+    </div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="index.html#about-me">About Me</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact-info">Contact Information</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<section id="projects">
+  <h1 class="title">Rotating Bridge Opening Mechanism</h1>
+  <p class="section__text__p1">Led the mechanical design and analysis of a rotating swing bridge system within a multidisciplinary MEng group project.</p>
+
+  <div class="details-container color-container">
+
+    <h2>🔧 Overview</h2>
+    <p>As the <strong>Mechanical Lead</strong> on this group design project, I was responsible for conceptualizing, designing, and validating the entire bridge opening mechanism. This included the hydraulic lifting system, rotational gearing and shaft, braking system, and closing mechanism — all housed within a 5 m reinforced concrete column.</p>
+
+    <h2>🎯 Objectives</h2>
+    <ul line-height: 2>
+      <li>Develop a safe, synchronized lifting and rotation mechanism housed within the central pillar</li>
+      <li>Calculate deck loads, stress distributions, and inertial values</li>
+      <li>Design braking and locking mechanisms to ensure safe operation</li>
+      <li>Perform static simulations and motion analysis in SolidWorks</li>
+      <li>Calculate required torque, power, and energy for bridge actuation</li>
+    </ul>
+
+    <h2>⚙️ Subsystems Breakdown</h2>
+    <p><strong>Lifting System:</strong> Six synchronized hydraulic jacks lift the bridge to engage the gear system. Designed to lift 27,968 kN, evenly split (4,661 kN per jack), with relief valves and ISO 46 oil to prevent overloads.</p>
+
+    <p><strong>Rotational System:</strong> Gear-driven rotation powered by a motor operating at 750 RPM. The bridge rotates 90° in 5 minutes using a trapezoidal motion profile, with peak torque requirements of 277.95 kNm and motor power ~18.2 kW.</p>
+
+    <p><strong>Locking System:</strong> A dovetail-style locking mechanism aligns and secures the bridge deck at rest. Spring damping prevents impact stress during closing. Brake clamps and sensors ensure emergency stop capability.</p>
+
+    <h2>📸 Key Visuals</h2>
+    <div class="image-row">
+      <div class="image-column">
+        <img src="Torque vs Time.png" alt="Torque vs Time" />
+        <p class="image-caption">Torque-time profile during operation</p>
+      </div>
+      <div class="image-column offset-middle">
+        <img src="Section view of Opening Mech.png" alt="Section View of Central Pillar" />
+        <p class="image-caption">Section View of Opening Mechanism in the central pillar</p>
+      </div>
+      <div class="image-column">
+        <img src="Motion Graphs.png" alt="Motion Profile" />
+        <p class="image-caption">Angular displacement & velocity graphs</p>
+      </div>
+    </div>
+
+    <h2> 🧮 Core Calculations</h2>
+    <ul line-height: 1.8>
+      <li><strong>Deck Inertia:</strong> 2.55 × 10⁹ kg·m² (SolidWorks mass properties)</li>
+      <li><strong>Max Torque:</strong> 277.95 kNm during acceleration phase</li>
+      <li><strong>Motor Power:</strong> 18.18 kW at 0.0654 rad/s</li>
+      <li><strong>Hydraulic Jack Load:</strong> 4,661 kN per jack (6 jacks)</li>
+      <li><strong>Energy Consumption:</strong> ~1.1 MJ during rotation</li>
+    </ul>
+
+    <h2>🧠 Reflections</h2>
+    <p>This project gave me full ownership over the mechanical subsystem of a real-world infrastructure design. I tackled load-path validation, stress distribution analysis, hydraulic and motor sizing, and mechanical timing profiles. Despite software limitations in simulating bearings and reinforced concrete, I found reliable workarounds through engineering judgment and iterative design.</p>
+
+    <br>
+
+    <div class="section__text">
+      <button class="btn btn-color-1" onclick="window.open('Opening Mech- final.pdf')">📄 View Full Section PDF</button>
+    </div>
+    <br>
+    <a href="index.html#projects" class="btn btn-color-1">← Back to Projects</a>
+
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FEA: Truss Structure Analysis</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="media.css" />
+</head>
+
+  <nav id="desktop-nav">
+    <div class="logo">
+      <a href="index.html">Danial Nayyar</a>
+    </div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="index.html#about-me">About Me</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact-info">Contact Information</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+    
+
+<section id="projects">
+  <h1 class="title">FEA of Pressurized Truss Structure</h1>
+  <p class="section__text__p1">MATLAB vs ABAQUS comparison, truss optimization, and pressure capacity enhancement.</p>
+
+  <div class="details-container color-container">
+    <img src="FEA P1.png" alt="FEA Results" class="project-img" />
+    <br><br>
+
+    <h2>🔧 Overview</h2>
+    <p>Using MATLAB and ABAQUS, I simulated a 2×2×1 m³ steel containment truss structure subjected to internal pressure. I compared solver outputs, identified redundant members, and optimized the structure through reinforcement and material changes.</p>
+
+    <h2>🎯 Objectives</h2>
+    <ul>
+      <li>Simulate internal pressure loading using Direct Stiffness Method (MATLAB)</li>
+      <li>Validate results against ABAQUS (displacement/stress)</li>
+      <li>Identify and remove redundant trusses</li>
+      <li>Apply roller supports to reduce deformation</li>
+      <li>Explore material substitutions (hollow/square trusses)</li>
+      <li>Simulate variable external loads (FR, FL, FT, FB)</li>
+    </ul>
+
+    
+    <div class="image-row">
+    <div class="image-column">
+        <img src="FEA P1 - FR+FT+FB+FL forces.png" alt="Variable Load Plot" />
+        <p class="image-caption">Applied variable external loads (FR, FL, FT, FB)</p>
+    </div>
+    <div class="image-column middle-offset">
+        <img src="FEA P1 - Stress Plot.png" alt="Stress Plot" />
+        <p class="image-caption">Stress distribution under internal pressure</p>
+    </div>
+    <div class="image-column">
+        <img src="FEA P1 - Stress Plot (Post Removal).png" alt="Stress Plot After Truss Removal" />
+        <p class="image-caption">Optimized structure after redundant element removal</p>
+    </div>
+    </div>
+
+    <h2>🛠️ Tools & Techniques</h2>
+    <ul>
+      <li>MATLAB: 2D Truss FEA</li>
+      <li>ABAQUS: Stress contour plots, mesh simulation</li>
+      <li>Structural optimization based on displacement/stress contours</li>
+      <li>Comparative analysis using deformation plots and graphs</li>
+    </ul>
+
+    <h2>📊 Key Results</h2>
+    <ul>
+      <li><strong>Initial max displacement:</strong> ≈ 4.39 × 10⁻⁴ m</li>
+      <li><strong>Post-reinforcement:</strong> Displacement reduced to 7.05 × 10⁻⁵ m</li>
+      <li><strong>Redundant trusses removed:</strong> No effect on structural integrity</li>
+      <li><strong>New max pressure:</strong> Increased from 6 kPa → 35 kPa</li>
+      <li><strong>Hollow/square trusses:</strong> Unviable due to high displacements (5–7 mm)</li>
+    </ul>
+
+    <h2>🧠 Reflections</h2>
+    <p>This project showed how custom numerical solvers can rival commercial FEA tools when properly validated. I also explored structural efficiency, reinforcement techniques, and the significant impact of material selection and boundary conditions on structural performance.</p>
+
+    <br>
+
+    <div class="section__text">
+      <button class="btn btn-color-1" onclick="window.open('FEA P1.pdf')">📄 View Full Report (PDF)</button>
+    </div>
+
+    <br>
+    <a href="index.html#projects" class="btn btn-color-1">← Back to Projects</a>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
