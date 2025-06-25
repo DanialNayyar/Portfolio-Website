@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Element Formulation for FEA</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="media.css" />
+</head>
+
+  <nav id="desktop-nav">
+    <div class="logo">
+      <a href="index.html">Danial Nayyar</a>
+    </div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="index.html#about-me">About Me</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact-info">Contact Information</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+    
+
+<section id="projects">
+  <h1 class="title">Derivation of 2D Quadrilateral Element Formulations for Finite Element Analysis</h1>
+  <p class="section__text__p1">Derived different matricies used to make the shape function plots</p>
+
+  <div class="details-container color-container">
+    <img src="FEA P3 - Shape Function plot.png" alt="Shape Function plot" class="project-img" />
+    <br><br>
+
+    <h2>🔧 Overview</h2>
+    <p>This project involved deriving the Finite Element formulations for a 2D quadrilateral (4-node) using isoparametric interpolation. The project involved, shape function manipulation, jacobian transformation, strain-displacement and element stiffness matricicies which could be programmed for FEA implementation</p>
+
+    <br>
+    <h2>🎯 Objectives</h2>
+    <ul style="line-height: 1.8;">
+      <li>Derive <strong>Shape Functions N<sub>i</sub>(ξ,η)</strong></li>
+      <li>Compute <strong>Jacobian Matrix</strong> and its <strong>determinant</strong></li>
+      <li>Derivation of <strong>Strain Displacement Matrix</strong> B</li>
+      <li>Derivation of <strong>Stiffness Matrix, K</strong></li>
+      <li> <strong>Plot</strong> Shape Function (MATLAB)</li>
+    
+    </ul>
+
+    
+    <div class="image-row">
+    <div class="image-column">
+        <img src="FEA P3 - Shape Function 2.png" alt="FEA P3 - Shape Function 2" />
+        <p class="image-caption"> Shape Function plot, N1</p>
+    </div>
+    <div class="image-column middle-offset">
+        <img src="FEA P3 - Shape Function plot 3.png" alt="FEA P3 - Shape Function 3" />
+        <p class="image-caption">Shape Function Plot, N4</p>
+    </div>
+
+    </div>
+    <h2>🛠️ Tools & Techniques</h2>
+    <ul>
+      <li>MATLAB: Shape Functions</li>
+      <li>Numerical Integration</li>
+      <li>Mapping between natural (ξ, η) and global (x, y) coordinates</li>
+    </ul>
+    <br>
+   
+<h2>📊 Key Results</h2>
+
+<ul style="line-height: 1.8;">
+  <li>
+    Derived full <strong>shape function</strong> for 4-node quadrilateral element:
+    <br><br>
+    <pre style="background:#ffffff; padding:1rem; border-radius:0.5rem; overflow-x:auto;">
+N<sub>i</sub><sup>4Q</sup> = α<sub>1</sub><sup>i</sup> + α<sub>2</sub><sup>i</sup>φ + α<sub>3</sub><sup>i</sup>η + α<sub>4</sub><sup>i</sup>φη
+    </pre>
+    <br>
+    And numerically determined shape functions:
+    <pre style="background:#ffffff; padding:1rem; border-radius:0.5rem; overflow-x:auto;">
+N<sub>1</sub> =  0.295 - 0.516φ - 0.516η + 1.180φη
+N<sub>2</sub> =  0.500 - 0.279φ + 0.131η - 2.818φη
+N<sub>3</sub> = -1.017 + 2.780φ + 2.780η - 4.068φη
+N<sub>4</sub> =  0.220 - 0.760φ + 0.240η - 1.721φη
+    </pre>
+  <li>
+    Constructed the full <strong>strain-displacement matrix</strong> <code>B</code> using symbolic partial derivatives of each shape function.
+  </li>
+
+  <li>
+    Computed the <strong>Jacobian matrix</strong> <code>J</code> for isoparametric mapping and its determinant <code>|J|</code> to allow coordinate transformation.
+  </li>
+  <br>
+    <h2>🧠 Reflections</h2>
+    <p>This project provided a deeper understanding of Finite Element from first principles. It linked the matrix assembly, coordinate transformation and interpolation theory.</p>
+
+    <br>
+
+    <div class="section__text">
+      <button class="btn btn-color-1" onclick="window.open('FEA Individual CW - The Write Up -P3.pdf')">📄 View Full Report (PDF)</button>
+      <button class="btn btn-color-2" onclick="window.open('https://github.com/DanialNayyar/University-Projects/tree/main/Finite%20Element%20Applications/Problem%203%20%E2%80%93%20Mathematics%20of%20Element%20Formulations%20%20showing%20analytical%20calculations')"> 💻 <br>Shape Functions code </button>
+
+    </div>
+
+    <br>
+    <a href="index.html#projects" class="btn btn-color-1">← Back to Projects</a>
+  
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

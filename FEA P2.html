@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FEA: Fracture Simulation and Mesh Comparison</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="media.css" />
+</head>
+
+  <nav id="desktop-nav">
+    <div class="logo">
+      <a href="index.html">Danial Nayyar</a>
+    </div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="index.html#about-me">About Me</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact-info">Contact Information</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+    
+
+<section id="projects">
+  <h1 class="title">Fracture Simulation & Mesh Comparison</h1>
+  <p class="section__text__p1">Comparison study of different mesh elements: Hexhaedral, Wedge and Tetrahedral </p>
+
+  <div class="details-container color-container">
+    <img src="FEA P2 - Meshs.png" alt="FEA Meshes" class="project-img" />
+    <br><br>
+
+    <h2>🔧 Overview</h2>
+    <p>This project explored how different mesh element types accuracy of stress and strain values near a fracture tip under a load. A 3D specimen was designed in SolidWorks and meshed in ABAQUS using the different elements. Stress concentration, displacement and strain behaviour were plotted.</p>
+
+    <h2>🎯 Objectives</h2>
+    <ul>
+      <li>Investigation of mesh type around crack tip</li>
+      <li>Evaluate the effects of element shape & node density on stress and strain </li>
+      <li>Quantified and plotted principle and average stresses at the fracture tip for each mesh element</li>
+      <li>Determine the most suitable element type for accuracy</li>
+    </ul>
+
+    
+    <div class="image-row">
+    <div class="image-column">
+        <img src="FEA P2- Crack tip stress (plot).png" alt="Variable Load Plot" />
+        <p class="image-caption">Plot of Crack Tip Stresses</p>
+    </div>
+<!--    <div class="image-column middle-offset">
+        <img src="FEA P1 - Stress Plot.png" alt="Stress Plot" />
+        <p class="image-caption">Stress distribution under internal pressure</p>
+    </div> -->
+    <div class="image-column">
+        <img src="FEA P2 - Displacement Magnitude (Tet).png" alt="Displacement Magnitude of the specimen with Tetrahedral Mesh Elements" />
+        <p class="image-caption">Displacement of the specimen with Tetrahedral Mesh</p>
+    </div>
+    </div>
+
+    <h2>🛠️ Tools & Techniques</h2>
+    <ul style="line-height: 2;">
+      <li>ABAQUS</li>
+      <li>SolidWorks (Geometry Modelling)</li>
+      <li>Structural Analysis (Static)</li>
+      <li>Mesh Refining</li>
+      <li>Visualisation of Stress & Plastic Strain</li>
+      <li>Post-Processing - Von Mises stress, principle stress, displacement, plastic strain</li>
+    </ul>
+
+    <h2>📊 Key Results</h2>
+    <ul style="line-height: 2;">
+      <li><strong>Tetrahedral Elements:</strong> Provided best result with respect to the curved edges (e.g. holes), it resulted in more accurate stress distribution at the tip</li>
+      <li><strong>Hexahedral Elements:</strong> Highest local stress but poor fitting around the holes</li>
+      <li><strong>Wedge Elements:</strong> Provided a balance between mesh density and fidelity with a slight reduction in accuracy</li>
+      <li><strong>Principle Stresses </strong> were higher at the tip for all mesh types</li>
+    </ul>
+
+    <h2>🧠 Reflections</h2>
+    <p>This project demonstrated the importance of element selection in Finite Element Analysis (FEA) especially in important zones like crack tips. Mesh topology affected the stress predictions even though initial boundary conditions were the same. Tetrahedral elements demonstrated that the disadvantage of high accuracy is increased computational cost, as a result it is important to consider the accuracy-computational cost trade-off when selectin mesh element type for a given study.</p>
+
+    <br>
+
+    <div class="section__text">
+      <button class="btn btn-color-1" onclick="window.open('FEA Individual CW - The Write Up - P2.pdf')">📄 View Full Report (PDF)</button>
+    </div>
+
+    <br>
+    <a href="index.html#projects" class="btn btn-color-1">← Back to Projects</a>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

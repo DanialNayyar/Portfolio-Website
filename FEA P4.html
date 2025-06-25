@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FEA: Boundary Condition Modelling for a Steel Specimen </title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="media.css" />
+</head>
+
+  <nav id="desktop-nav">
+    <div class="logo">
+      <a href="index.html">Danial Nayyar</a>
+    </div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="index.html#about-me">About Me</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact-info">Contact Information</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+    
+
+<section id="projects">
+  <h1 class="title">Modelling a Steel Specimen under Load</h1>
+  <p class="section__text__p1">Modeled and simulated a dynamic fracture test, under SHPB conditions, to analyse material failuer in ABAQUS .</p>
+
+  <div class="details-container color-container">
+    <img src="FEA P4 - Nodal Set.png" alt="Nodal Set" class="project-img" />
+    <br><br>
+
+    <h2>🔧 Overview</h2>
+    <p>This project explored the dynamic tensile behaviour of a steel speciment under Split Hopkins Pressure Bar (SHPB) conditions using the ABAQUS Software. A M-shaped geomrety was made in SolidWorks and then imported into ABAQUS where it was subjected to compressive displacement. Elemet deletion was also implemented to replicate the fracture behaviour. This project's main focus was on stress concentration, strain, displacement and dynamic yielding in the gauge section of the specimen.</p>
+
+    <h2>🎯 Objectives</h2>
+    <ul>
+      <li>Simulate compressive dynamic loading of a steel specimen with the the relevant boundary conditions</li>
+      <li>Investigate the material response under the dynamic conditions inluding yielding and softening</li>
+      <li>Analyse the von Mises Stress, plastic strain (PEEQ), displacement and active yield regions</li>
+      <li>Plot stress-strain relation at the gauge sections</li>
+      <li>Analyse sources of simulation error and their effects </li>
+    </ul>
+
+    
+    <div class="image-row">
+    <div class="image-column">
+        <img src="FEA P4- Stress Plot Von Mises.png" alt="FEA P4- Stress Plot Von Mises" />
+        <p class="image-caption">Von Mises Stress Plot</p>
+    </div>
+    <div class="image-column middle-offset">
+        <img src="FEA P4 - Stress Strain Plot.png" alt="Stress-Strain Plot" />
+        <p class="image-caption">Stress-Strain Plot</p>
+    </div>
+    <div class="image-column">
+        <img src="FEA P4- Displacement Magnitude.png" alt="Displacement Magnitude" />
+        <p class="image-caption">Displacement Magnitude</p>
+    </div>
+    </div>
+
+    <h2>🛠️ Tools & Techniques</h2>
+
+    <ul style="line-height: 1.8;">
+    <li><strong>SolidWorks:</strong> Designed the custom M-shaped steel specimen to match SHPB test constraints.</li>
+
+  <li><strong>ABAQUS:</strong>
+    <ul style="line-height: 1.8; ">
+      <li> <strong>Hexahedral meshing</strong> with <em>element deletion</em>.</li>
+      <li> <strong>Material model:</strong> Elasto-plastic steel with isotropic softening and damage evolution.</li>
+      <li><strong>Boundary conditions:</strong> Prevent movement in <em>X-Z</em> directions and also applied the 3mm displacement to the top face.  .</li>
+      <li><strong>Post-processing: </strong> von Mises stress, equivalent plastic strain (PEEQ), displacement magnitude, and active yield flag (AC YIELD).</li>
+    </ul>
+  </li>
+
+
+    <h2>📊 Key Results</h2>
+    <ul style="line-height: 1.8;">
+      <li><strong>Max Von Mises Stress:</strong>~ 253 Mpa (250 MPa analytically), error of <strong>1.2%</strong></li>
+      <li><strong>Displacement:</strong> Concentrated in the <strong>central section</strong> of the M-shaped specimen</li>
+  <li>
+    <strong>Stress–Strain Curve:</strong> Three zone response
+    <div style="padding-left: 2rem; margin-top: 0.5rem;">
+      <p><strong>Zone 1:</strong> High Stress, Low Strain at the top of the gauge</p>
+      <p><strong>Zone 2:</strong> Moderate Stress, Increased Strain in the centre</p>
+      <p><strong>Zone 3:</strong> Lower Stress, Low displacement at the bottom of the gauge</p>
+    </div>
+  </li>
+    <h2>🧠 Reflections</h2>
+    <p>This project demonstrated the importance or realistic boundary condtions in order to replicate physical test setups. Mesh size and Mesh type influence was also observed in terms of stress concentration accuracy. The hexahedral mesh, captured the major effects but did struggle with curved edge which suggested that Tetrahedral mesh elements yield better results. The small error margin of 1.2% validates the experimental setup </p>
+
+    <br>
+
+    <div class="section__text">
+      <button class="btn btn-color-1" onclick="window.open('FEA Individual CW - The Write Up P4.pdf')">📄 View Full Report (PDF)</button>
+    </div>
+
+    <br>
+    <a href="index.html#projects" class="btn btn-color-1">← Back to Projects</a>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
