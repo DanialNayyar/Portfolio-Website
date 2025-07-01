@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investigation and Simulation of Fluid Flow in Curved Pipes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="media.css" />
+</head>
+
+  <nav id="desktop-nav">
+    <div class="logo">
+      <a href="index.html">Danial Nayyar</a>
+    </div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="index.html#about-me">About Me</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact-info">Contact Information</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+    
+
+<section id="projects">
+  <h1 class="title">Investigation and Simulation of Fluid Flow in Curved Pipes</h1>
+  <p class="section__text__p1">Exploring the formation of Dean vorticies, pressure gradients and the pipe's structural integrity.</p>
+
+  <div class="details-container color-container">
+    <img src="Num_Meth- Shear Stress.png" alt="Shear Stress" class="project-img" />
+    <br><br>
+
+    <h2>🔧 Overview</h2>
+    <p>This two phased project investigaterd the fluid flow through curved geometries and the effects of those flows on the piping system's structural integrity. It combined research and implementation by first conducting a literature review of the topic and then using the data as a validation metric after the simulations were completed. The simulations were conducted with ANSYS Fluent and Mechanical APDL with the geometries being modelled in SolidWorks. This project as a whole focused on flow profiles, pressure gradients and the formation of secondry flows with special attention on Dean vorticies. Various Reynolds numbers were used (ranging from 1000 to 3000 Re) to simulate the flow, alongside multiple mesh densites to valide the results with analytical results and also to evaluate the pipe integrity under pressure surges.</p>
+
+    <h2>🎯 Objectives</h2>
+    <ul>
+      <li>Understand the behavior of fluid flow through curved geometries</li>
+      <li>Investigate the effects of curvature ratio on pressure distribution and velocity</li>
+      <li>Identify and analyse the formation of Dean vorticies</li>
+      <li>Evaluate the pipe's strucutral integrity under pressure surges</li>
+      <li>Demonstrate the effect of mesh refinement and boundary conditions on CFD accuracy</li>
+      <li>Compare simulation results against literature review data e.g. Molki et al., 2013 </li>
+    </ul>
+
+    
+    <div class="image-row">
+    <div class="image-column">
+        <img src="Num_Meth - pressure contour plot.png" alt="Pressure contour plot" />
+        <p class="image-caption">Pressure contour plot</p>
+    </div>
+    <div class="image-column middle-offset">
+        <img src="Num_Meth - Velocity at the bend (Re =1000).png" alt="Velocity at the bend (Re = 1000)" />
+        <p class="image-caption">Velocity at the bend (Re = 1000)</p>
+    </div>
+    <div class="image-column">
+        <img src="Num_Meth- Velocity profile.png" alt="Velocity Profile for straight pipe" />
+        <p class="image-caption">Velocity Profile for straight pipe</p>
+    </div>
+    </div>
+
+    <h2>🛠️ Tools & Techniques</h2>
+    <ul>
+      <li>SolidWorks: Construction of pipe geometries<li>
+      <li>ANSYS: Conduct CFD simulations for both laminar and turbulent flows</li>
+      <li>Python & MATLAB: Calculation and plotting of Velocity profiles</li>
+    </ul>
+
+    <h2>📊 Key Results</h2>
+    <ul>
+      <li><strong>Curvature Ratio:</strong> Increased curvature ratio caused greater distortion to axial velocity profiles as well as the formation of Dean vorticies</li>
+      <li><strong>Pressure gradients:</strong> Build across pipe section during bends, higher pressure on the outside wall</li>
+      <li><strong>Straight Pipe validation:</strong> The simulated velocity profile was in agreement with Molki et al., (error of less than 1%)</li>
+      <li><strong>Mesh Sensitivity:</strong> Accuracy increased with element refinement (upto a point)</li>
+      <li><strong>Structural Integrity:</strong> Pipe remained structurally sound due to steel's structural properties</li>
+    </ul>
+
+    <h2>🧠 Reflections</h2>
+    <p>This project highlighted how even relatively simple geometries can cause complex flow profiles to form that can be detrimental to the structure. ANSYS is a phenomenal tool for simulating fluid flows and validating results against experimental data. A vital insight came from mesh optimisation, it highlighted the balance that needs to be achieved to balance the computational cost and simulation accuracy </p>
+
+    <br>
+
+    <div class="section__text">
+      <button class="btn btn-color-1" onclick="window.open('Investigation and Simulation of Fluid Flow in Curved Pipes- From Dean Vortices to Structural Integrity Analysis.pdf')">📄 View Full Report (PDF)</button>
+    </div>
+
+    <br>
+    <a href="index.html#projects" class="btn btn-color-1">← Back to Projects</a>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
